@@ -3,9 +3,9 @@
 Se presenta una plantilla con componentes y un enrutado basico y se añade la simulación al servidor.\
 Tambien tiene el componente de inicio de sesion con algunas nalidaciones y bootstrap
 
-## Video explicativo de introducciòn a React
+## Video explicativo de plantilla en React
 
-https://drive.google.com/file/d/1JQAaFU5z2GEanq94-J59k2quZjEojMIh/view?usp=sharing
+https://drive.google.com/file/d/1xbV-PI4XbEdZDoONlsvldRgEtJQ5oslF/view?usp=sharing
 
 ### A continuaciòn se muestra el readme por defecto al crear el proyecto React con npm
 
