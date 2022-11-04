@@ -1,6 +1,7 @@
 # Introducciòn React (componentes y enrutado)
 
-Se presenta una plantilla con componentes y un enrutado basico
+Se presenta una plantilla con componentes y un enrutado basico y se añade la simulación al servidor.\
+Tambien tiene el componente de inicio de sesion con algunas nalidaciones y bootstrap
 
 ## Video explicativo de introducciòn a React
 
