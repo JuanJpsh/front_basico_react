@@ -1,31 +1,7 @@
-const productos = [
-    {
-        idUser: "1",
-        id: "1",
-        nombre: "manzana",
-        precio: 5000
-    },
-    {
-        idUser: "1",
-        id: "2",
-        nombre: "pera",
-        precio: 6000
-    },
-    {
-        idUser: "2",
-        id: "3",
-        nombre: "banano",
-        precio: 7000
-    }
-]
+import axios from "axios";
+const urlBase = "http://localhost:3001/api/prod";
 
-export async function productosUsuario(idUsuario){
-    //Llamando al servicio
-    /*
-    const res = await axios.get(urlBase + "iniciarSesion/" + usuario + "/" + contrasenia);
-    if (res || res.id !== "0")
-        return true;
-    return false;   
-    */ 
-    return productos.filter((prod) => prod.idUser === idUsuario)
+export async function productosUsuario(idUsuario) {
+  let res = await axios.get(urlBase + `/${idUsuario}`);
+  return res.data;
 }

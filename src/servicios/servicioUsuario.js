@@ -1,34 +1,14 @@
-//import axios from "axios";
-//const urlBase = "http://localhost:3001/"
+import axios from "axios";
+const urlBase = "http://localhost:3001/api/user";
 
-const usuario = [
-    {
-        id: "1",
-        nombre: "Juan",
-        usuario: "juan",
-        contrasenia: "solarte"
-    },
-    {
-        id: "2",
-        nombre: "Pablo",
-        usuario: "pablo",
-        contrasenia: "hoyos"
-    }
-]
-
-export async function iniciarSesion(nombreUsuario, contrasenia){
-    //Llamando al servicio
-    /*
-    let res = await axios.get(urlBase + "iniciarSesion/" + nombreUsuario + "/" + contrasenia);
-    if (res || res.id !== "0")
-        return true;
-    return false;   
-    */
-    let res = usuario.find((usuario) => usuario.usuario === nombreUsuario && usuario.contrasenia === contrasenia)
-    if(res){
-        localStorage.setItem("id", res.id)
-        localStorage.setItem("nombre", res.nombre)
-        return true
-    }
-    return false
+export async function iniciarSesion(nombreUsuario, contrasenia) {
+  let res = await axios.get(
+    urlBase + "/login/" + nombreUsuario + "/" + contrasenia
+  );
+  if (res.data || res.data._id !== "0") {
+    localStorage.setItem("id", res.data._id);
+    localStorage.setItem("nombre", res.data.nombre);
+    return true;
+  }
+  return false;
 }

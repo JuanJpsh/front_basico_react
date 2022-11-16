@@ -36,7 +36,7 @@ export default class Productos extends Component {
             {this.state.status === true &&
               this.state.productos.map((prod) => {
                 return (
-                  <tr key={prod.id}>
+                  <tr key={prod._id}>
                     <td>{prod.nombre}</td>
                     <td>{prod.precio}</td>
                     <td>
